@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Random Dice Simulator</title>
+  </head>
+  <body> <center>  <br><br><br>
+    <form action="index.php" method="post" onSubmit="return validate();">
+      <label>Choose a number</label>  &nbsp&nbsp
+      <input id="numb" type="number" name="numb"> <br><br><br>
+      <input type="submit" value="submit">
+    </form>
+  </center> </body>
+  <script type="text/javascript">
+    function validate()
+    {
+      var n = document.getElementById("numb").value;
+      if(n=="") {
+        alert("Enter an number");
+        return false;
+      }
+      if(n<1) {
+        alert("Number should be greater than 1.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</html>
